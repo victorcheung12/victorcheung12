@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Auto-Regressive Surface Cutting.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SeamGPT</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/heart.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            Auto-Regressive Surface Cutting
+          </h1>
+          <!-- <h2 class="title conference-title">
+            <small style="color:#9d2020;">Arxiv</small>
+          </h2> -->
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yang-l1.github.io/">Yang Li</a><sup>1<strong>*</strong></sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://victorcheung12.github.io/seamgpt">Victor Cheung</a><sup>1<strong>*</strong></sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://victorcheung12.github.io/seamgpt">Xinhai Liu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://victorcheung12.github.io/seamgpt">Yuguang Chen</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://victorcheung12.github.io/seamgpt">Zhongjin Luo</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://victorcheung12.github.io/seamgpt">Biwen Lei</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://victorcheung12.github.io/seamgpt">Haohan Weng</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://victorcheung12.github.io/seamgpt">Zibo Zhao</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://victorcheung12.github.io/seamgpt">Jingwei Huang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://victorcheung12.github.io/seamgpt">Zhuo Chen</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://victorcheung12.github.io/seamgpt">Chunchao Guo</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <small><strong>*</strong>: Equal contributions</small>
+            <br>
+            <span class="author-block"><sup>1</sup>Tencent Hunyuan</span>
+            <span class="author-block"><sup>2</sup>SYSU</span>
+            <span class="author-block"><sup>3</sup>CUHKSZ</span>
+            <span class="author-block"><sup>4</sup>SCUT</span>
+            <br>
+            <!-- <small><strong>†</strong>: Corresponding Author</small> -->
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://victorcheung12.github.io/seamgpt"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://victorcheung12.github.io/seamgpt"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://victorcheung12.github.io/seamgpt"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.jpg"
+                 class="interpolation-image"/>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">SeamGPT</span> generates surfaces cutting seams, facilitating UV flatten and part decomposition.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Surface cutting is a fundamental task in computer graphics, with applications in UV parameterization, texture mapping, and mesh decomposition. However, existing methods often produce technically valid but overly fragmented atlases that lack semantic coherence.
+            We introduce <b>SeamGPT</b>, an auto-regressive model that generates cutting seams by mimicking professional workflows.
+            Our key technical innovation lies in formulating surface cutting as a next token prediction task: sample point clouds on mesh vertices and edges, encode them as shape conditions, and employ a GPT-style transformer to sequentially predict seam segments with quantized 3D coordinates.
+            Our approach achieves exceptional performance on UV unwrapping benchmarks containing both manifold and non-manifold meshes, including artist-created, and 3D-scanned models. 
+            In addition, it enhances existing 3D segmentation tools by providing clean boundaries for part decomposition.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/lRn-HqyCrLI?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="colume content">
+          <h2 class="title is-3">Pipeline</h2>
+          <img src="./static/images/pipeline.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+          <p>
+            SeamGPT architecture:  Point cloud encoder extracts shape context; Causal transformer decoder generates axis-ordered seam coordinates. 
+    Color indicates the prediction order is of the seam segments (red to blue).
+            </p>   
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="colume content">
+          <h2 class="title is-3">Mesh UV-unwrapping</h2>
+          <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+          <img src="./static/images/fam-compare.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="colume content">
+          <h2 class="title is-3">Seam Enhanced 3D Part Segmentation</h2>
+          <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+        <img src="./static/images/fig_part_seg_results.jpg"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="colume content">
+          <h2 class="title is-3">Ablation of point sampling strategy.</h2>
+          <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+        <img src="./static/images/ablation-sample.jpg"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="colume content">
+          <h2 class="title is-3">Ablation study of encoder and decoder.</h2>
+          <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+        <img src="./static/images/ablation-ptrnet-meshcond.jpg"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="colume content">
+          <h2 class="title is-3">Seam length control and diversity.</h2>
+          <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+        <img src="./static/images/bunny-ablation.jpg"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+        </div>
+      </div>
+    </div>
+
+    
+
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @misc{yan2024phycage,
+        title={Auto-Regressive Surface Cutting}, 
+        author={Yang Li and Victor Cheung and Xinhai Liu and Yuguang Chen and Zhongjin Luo and Biwen Lei and Haohan Weng and Zibo Zhao and Jingwei Huang and Zhuo Chen and Chunchao Guo},
+        year={2025},
+        eprint={},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={}, 
+    }
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is based on <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
